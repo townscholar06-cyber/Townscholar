@@ -7,7 +7,7 @@ import Cursor from './components/Cursor'
 import Price from './components/Price'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import { Dummy } from './components/Dummy'
+// import { Dummy } from './components/Dummy'
 
 export default function App() {
   return (
