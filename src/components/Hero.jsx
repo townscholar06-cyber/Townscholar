@@ -455,7 +455,7 @@ export default function Hero() {
             )}
 
             {/* Video Content */}
-            <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative z-10 lg:max-w-6xl w-full h-full rounded-2xl overflow-hidden shadow-2xl">
               <AnimatePresence mode="wait">
                 {!showRealVideo ? (
                   <motion.div

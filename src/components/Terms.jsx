@@ -72,7 +72,7 @@ export default function Terms() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
       <div className="bg-white shadow-lg border-b-2 sm:border-b-4 border-indigo-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
           {/* Back Button */}
           <div className="mb-4 sm:mb-6">
             <button
@@ -103,7 +103,7 @@ export default function Terms() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 font-space sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="max-w-6xl mx-auto px-4 font-space sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div className="grid gap-6 sm:gap-8 lg:gap-10">
           {sections.map((section, index) => (
             <div

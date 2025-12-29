@@ -7,6 +7,11 @@ import Cursor from './components/Cursor'
 import Price from './components/Price'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Clients from './components/Clients'
+import Founder from './components/Founder'
+import FAQ from './components/FAQ'
+import { Puzzle } from 'lucide-react'
+import Learning from './components/Learning'
 // import { Dummy } from './components/Dummy'
 
 export default function App() {
@@ -14,10 +19,15 @@ export default function App() {
     <div className="bg-slate-50 overflow-hidden">
       <Header/>
       <Hero />
+      <Founder/>
       <Daddy />
-      <Story />
+      <Clients/>
+      <Puzzle/>
+      <Learning/>
+      {/* <Story /> */}
       <Cursor />
-      <Price />
+      {/* <Price /> */}
+      <FAQ/>
       <Footer/>
 
       {/* <Dummy/> */}
