@@ -263,7 +263,7 @@ export default function Learning() {
           here's what you'll be learning:{`)`}
         </motion.h3>
         <motion.p
-          className="text-base md:text-lg font-space text-gray-600 leading-relaxed px-2 md:px-0 mb-4"
+          className="text-base md:text-lg space-grotesk-300 text-gray-600 leading-relaxed px-2 md:px-0 mb-4"
           variants={bottomVariants}
         >
           When content doesn't work, most creators blame the algorithm. But

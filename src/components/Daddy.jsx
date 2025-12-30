@@ -15,7 +15,7 @@ import {
   MdScience,
   MdPeople,
   MdShare,
-  MdPhoneAndroid,
+  MdTrendingUp,
 } from "react-icons/md";
 
 const Daddy = () => {
@@ -269,23 +269,19 @@ const Daddy = () => {
 
   // Checklist data as arrays with icons
   const algorithmBlamerChecklist = [
-    { text: "You constantly complain about the", icon: BiSolidDislike },
-    { text: "You blame everyone else for lack", icon: MdGroup },
-    { text: "You think you know best but still", icon: MdLightbulb },
-    { text: "You say you can't take your content", icon: MdTrendingDown },
-    { text: "You rarely experiment or try", icon: MdScience },
-    { text: "You think everyone 50/50 fit", icon: MdPeople },
-    { text: "You think everyone 50/50 fit", icon: MdPeople },
+    { text: "You chase what’s trending instead of what fits you", icon: BiSolidDislike },
+    { text: "You try different formats without a clear reason", icon: MdGroup },
+    { text: "You get attention, but it doesn’t lead anywhere", icon: MdLightbulb },
+    { text: "You struggle to turn content into trust or opportunities", icon: MdTrendingDown },
+    { text: "You’re never fully sure what to post next", icon: MdScience },
   ];
 
   const algoDaddyChecklist = [
-    { text: "You constantly complain about the", icon: BiSolidDislike },
-    { text: "You blame everyone else for lack", icon: MdGroup },
-    { text: "You think you know best but still", icon: MdLightbulb },
-    { text: "You say you can't take your content", icon: MdTrendingDown },
-    { text: "You rarely experiment or try", icon: MdScience },
-    { text: "You think everyone 50/50 fit", icon: MdPeople },
-    { text: "You think everyone 50/50 fit", icon: MdPeople },
+    { text: "You create with a clear long-term goal", icon: MdShare },
+    { text: "Your ideas are structured so people follow and remember", icon: MdLightbulb },
+    { text: "You attract the right audience, not just more views", icon: MdPeople },
+    { text: "You turn attention into trust — and trust into opportunities", icon: MdTrendingUp },
+    { text: "You’re remembered for something specific", icon: MdScience },
   ];
 
   const renderAnimatedText = (text, className) => {
@@ -333,17 +329,17 @@ const Daddy = () => {
             viewport={{ once: true }}
           >
             <motion.div
-              className="w-6 h-6 bg-red-500 rounded-full"
+              className="w-8 h-8 bg-[#FF6262] rounded-full"
               variants={dotVariants}
               whileHover="hover"
             />
             <motion.div
-              className="w-6 h-6 bg-yellow-500 rounded-full"
+              className="w-8 h-8 bg-[#FFCB20] rounded-full"
               variants={dotVariants}
               whileHover="hover"
             />
             <motion.div
-              className="w-6 h-6 bg-green-500 rounded-full"
+              className="w-8 h-8 bg-[#76FF86] rounded-full"
               variants={dotVariants}
               whileHover="hover"
             />
@@ -430,6 +426,15 @@ const Daddy = () => {
                       "text-7xl md:text-8xl font-bold tracking-tighter text-[#FF6262] mb-4"
                     )}
                   </h2>
+                  <motion.h2
+                      className="text-base md:text-lg "
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.8 }}
+                    >
+                      Chasing Virality
+                    </motion.h2>
                   <motion.p
                     className="text-base text-gray-600 mb-3 leading-relaxed font-space"
                     initial={{ opacity: 0, y: 20 }}
@@ -437,15 +442,13 @@ const Daddy = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.8 }}
                   >
-                    You're posting. You're trying. But it
+                    You’re creating content with the hope that
                     <br />
-                    always feels like guesswork.Here's what
+                    this one might finally take off.
                     <br />
-                    most creators believe (and why it keeps
+                    Some posts spike
                     <br />
-                    them stuck): You blame the algorithm
-                    <br />
-                    when posts flop
+                    Most disappear.
                   </motion.p>
                 </div>
               </div>
@@ -507,7 +510,7 @@ const Daddy = () => {
                 <div className="">
                   <div className="flex items-end md:justify-center w-full">
                     <motion.div
-                      className="w-28 md:w-48 absolute -top-20 md:-top-48 -left-4 md:left-72"
+                      className="w-28 md:w-48 absolute -top-20 md:-top-48 -left-4 md:left-96"
                       variants={spinVariants}
                       animate="animate"
                     >
@@ -532,13 +535,13 @@ const Daddy = () => {
                       )}
                     </h2>
                     <motion.h2
-                      className="text-base md:text-lg md:text-center"
+                      className="text-base md:text-lg text-right"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.8 }}
                     >
-                      (with an AI sidekick)
+                      Building Something Sustainable <br />(AI-assisted)
                     </motion.h2>
                     <motion.p
                       className="text-base text-gray-600 mb-4 md:mb-6 text-left md:text-right leading-relaxed font-space"
@@ -547,15 +550,14 @@ const Daddy = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 1 }}
                     >
-                      You're not guessing anymore — you're structuring.
+                      You’re no longer chasing moments.
                       <br />
-                      Trust content trends and aren't flexible
+                      You’re building momentum.
                       <br />
-                      You've built a system that earns
+                      Your content has direction.
                       <br />
-                      attention, builds trust, and scales on
-                      <br />
-                      repeat.
+                      And it keeps working for you after it’s posted.
+                 
                     </motion.p>
                   </div>
                 </div>

@@ -232,17 +232,17 @@ const testimonials = [
         animate={isTestimonialsInView ? 'visible' : 'hidden'}
         variants={sectionVariants}
       >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto space-grotesk-300">
         {/* Header */}
         <div className="md:text-center mb-16">
           <motion.h1 
-            className="text-4xl md:text-6xl  font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl rethink-sans-600 tracking-tight font-bold text-gray-900 mb-6"
             variants={blurTextVariants}
           >
             Real feedback. Real results.
           </motion.h1>
           <motion.p 
-            className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-base text-gray-600 space-grotesk-300 max-w-3xl mx-auto leading-relaxed"
             variants={blurTextVariants}
             transition={{ delay: 0.2 }}
           >

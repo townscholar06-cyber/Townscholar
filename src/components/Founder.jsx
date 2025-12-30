@@ -45,6 +45,39 @@ const Counter = ({ end, suffix = "", delay = 0 }) => {
   );
 };
 
+const headerVariants = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: [0.34, 1.56, 0.64, 1],
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const dotVariants = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+  hover: {
+    scale: 1.1,
+    transition: { duration: 0.3 },
+  },
+};
+
 export default function Founder() {
   const [readMore, setReadMore] = useState(false);
 
@@ -53,8 +86,34 @@ export default function Founder() {
 
   return (
     <section ref={sectionRef} className="w-full bg-[#fafafa] md:py-16">
+      <div className="rounded-t-lg max-w-6xl md:mx-auto mb-8 md:mb-16 mx-4">
+          <motion.div
+            className="flex items-center space-x-2"
+            variants={headerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="w-8 h-8 bg-[#FF6262] rounded-full"
+              variants={dotVariants}
+              whileHover="hover"
+            />
+            <motion.div
+              className="w-8 h-8 bg-[#FFCB20] rounded-full"
+              variants={dotVariants}
+              whileHover="hover"
+            />
+            <motion.div
+              className="w-8 h-8 bg-[#76FF86] rounded-full"
+              variants={dotVariants}
+              whileHover="hover"
+            />
+          </motion.div>
+        </div>
       <div className="max-w-6xl mx-auto px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-8">
         {/* LEFT COLUMN */}
+        
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}

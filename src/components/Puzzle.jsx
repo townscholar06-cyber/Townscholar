@@ -135,7 +135,7 @@ export default function Puzzle() {
           </motion.h1>
 
           <motion.p 
-            className="mt-4 md:mt-6 text-base lg:text-lg text-[#4B4B4B] leading-relaxed max-w-2xl mx-auto px-2 md:px-0"
+            className="mt-4 md:mt-6 text-base lg:text-lg text-[#4B4B4B] space-grotesk-300 leading-relaxed max-w-2xl mx-auto px-2 md:px-0"
             variants={itemVariants}
           >
             You'll have a system you can reuse — again and again.

@@ -275,7 +275,7 @@ export default function Clients() {
   }, [currentIndex, clientCases.length]);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 pt-6 pb-16 md:py-20">
+    <div className="max-w-6xl mx-auto px-4 pt-6 pb-16 md:py-20 space-grotesk-300">
       {/* Heading */}
       <div className="max-w-4xl">
         <h1 className="text-4xl md:text-6xl indie-flower-regular leading-tight font-medium text-black">
@@ -363,15 +363,15 @@ export default function Clients() {
                 <div className="lg:w-[55%] text-white">
                   {/* Badges */}
                   <div className="flex gap-3 mb-8">
-                    <span className="border border-gray-600 rounded-full px-4 py-1 text-xs">
+                    <span className="border border-gray-600 space-grotesk-300 rounded-full px-4 py-1 text-xs">
                       {item.badgeLeft}
                     </span>
-                    <span className="border border-gray-600 rounded-full px-4 py-1 text-xs">
+                    <span className="border border-gray-600 space-grotesk-300 rounded-full px-4 py-1 text-xs">
                       {item.badgeRight}
                     </span>
                   </div>
 
-                  <h3 className="text-3xl font-serif mb-4 gloria-hallelujah-regular">{item.title}</h3>
+                  <h3 className="text-3xl font-serif mb-4 playfair-italic">{item.title}</h3>
 
                   <p className="text-sm leading-relaxed mb-8 whitespace-pre-line">
                     {item.intro}
