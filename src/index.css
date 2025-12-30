@@ -1,26 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Bellefair&family=Caveat:wght@400..700&family=Gloock&family=Lexend+Deca:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Bellefair&family=Caveat:wght@400..700&family=Encode+Sans+Expanded:wght@100..1000&family=Gloock&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@300..700&family=Indie+Flower&family=Gloria+Hallelujah&display=swap');
 @import "tailwindcss";
 
 :root {
-    /* CSS Custom Properties */
-    --font-lexend-deca: 'Lexend Deca', sans-serif;
-    --font-rethink-sans: 'Rethink Sans', sans-serif;
-    --font-space-grotesk: 'Space Grotesk', sans-serif;
-    --font-bad-script: 'Bad Script', cursive;
-    --font-bellefair: 'Bellefair', serif;
-    --font-gloock: 'Gloock', serif;
-    --font-caveat: 'Caveat', cursive;
+  /* CSS Custom Properties - ALL FONTS */
+  --font-lexend-deca: "Lexend Deca", sans-serif;
+  --font-rethink-sans: "Rethink Sans", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-bad-script: "Bad Script", cursive;
+  --font-bellefair: "Bellefair", serif;
+  --font-gloock: "Gloock", serif;
+  --font-caveat: "Caveat", cursive;
+  --font-indie-flower: "Indie Flower", cursive;
+  --font-gloria-hallelujah: "Gloria Hallelujah", cursive;
+  --font-encode-sans: "Encode Sans Expanded", sans-serif;
+  --font-playfair: "Playfair Display", serif;
 }
 
-/* Apply default font */
+/* Default body font */
 body {
-    font-family: var(--font-rethink-sans);
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: var(--font-rethink-sans);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* Lexend Deca Classes */
+/* ENCODE SANS EXPANDED - Full weight range */
+.encode-sans-100 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 100; }
+.encode-sans-200 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 200; }
+.encode-sans-300 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 300; }
+.encode-sans-400 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 400; }
+.encode-sans-500 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 500; }
+.encode-sans-600 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 600; }
+.encode-sans-700 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 700; }
+.encode-sans-800 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 800; }
+.encode-sans-900 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 900; }
+.encode-sans-1000 { font-family: "Encode Sans Expanded", sans-serif; font-weight: 1000; }
+
+/* PLAYFAIR DISPLAY Classes */
+.playfair-400 { font-family: "Playfair Display", serif; font-weight: 400; font-style: normal; }
+.playfair-500 { font-family: "Playfair Display", serif; font-weight: 500; font-style: normal; }
+.playfair-600 { font-family: "Playfair Display", serif; font-weight: 600; font-style: normal; }
+.playfair-700 { font-family: "Playfair Display", serif; font-weight: 700; font-style: normal; }
+.playfair-800 { font-family: "Playfair Display", serif; font-weight: 800; font-style: normal; }
+.playfair-900 { font-family: "Playfair Display", serif; font-weight: 900; font-style: normal; }
+.playfair-italic { font-family: "Playfair Display", italic, serif; font-weight: 400; font-style: italic; }
+
+/* HANDWRITTEN FONTS */
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+}
+.gloria-regular {
+  font-family: "Gloria Hallelujah", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* SINGLE-WEIGHT FONTS */
+.bad-script-regular { font-family: "Bad Script", cursive; font-weight: 400; font-style: normal; }
+.bellefair-regular { font-family: "Bellefair", serif; font-weight: 400; font-style: normal; }
+.gloock-regular { font-family: "Gloock", serif; font-weight: 400; font-style: normal; }
+
+/* CAVEAT Variable Weights */
+.caveat-400 { font-family: "Caveat", cursive; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
+.caveat-500 { font-family: "Caveat", cursive; font-optical-sizing: auto; font-weight: 500; font-style: normal; }
+.caveat-600 { font-family: "Caveat", cursive; font-optical-sizing: auto; font-weight: 600; font-style: normal; }
+.caveat-700 { font-family: "Caveat", cursive; font-optical-sizing: auto; font-weight: 700; font-style: normal; }
+
+/* LEXEND DECA Full Range */
 .lexend-deca-100 { font-family: "Lexend Deca", sans-serif; font-weight: 100; }
 .lexend-deca-200 { font-family: "Lexend Deca", sans-serif; font-weight: 200; }
 .lexend-deca-300 { font-family: "Lexend Deca", sans-serif; font-weight: 300; }
@@ -31,260 +79,59 @@ body {
 .lexend-deca-800 { font-family: "Lexend Deca", sans-serif; font-weight: 800; }
 .lexend-deca-900 { font-family: "Lexend Deca", sans-serif; font-weight: 900; }
 
-/* Rethink Sans Classes */
-.rethink-sans-400 { 
-    font-family: "Rethink Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
+/* RETHINK SANS */
+.rethink-sans-400 { font-family: "Rethink Sans", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
+.rethink-sans-500 { font-family: "Rethink Sans", sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal; }
+.rethink-sans-600 { font-family: "Rethink Sans", sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; }
+.rethink-sans-700 { font-family: "Rethink Sans", sans-serif; font-optical-sizing: auto; font-weight: 700; font-style: normal; }
+.rethink-sans-800 { font-family: "Rethink Sans", sans-serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; }
+.rethink-sans-400-italic { font-family: "Rethink Sans", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: italic; }
+.rethink-sans-700-italic { font-family: "Rethink Sans", sans-serif; font-optical-sizing: auto; font-weight: 700; font-style: italic; }
 
-.rethink-sans-500 { 
-    font-family: "Rethink Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
+/* SPACE GROTESK */
+.space-grotesk-300 { font-family: "Space Grotesk", sans-serif; font-optical-sizing: auto; font-weight: 300; font-style: normal; }
+.space-grotesk-400 { font-family: "Space Grotesk", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
+.space-grotesk-500 { font-family: "Space Grotesk", sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal; }
+.space-grotesk-600 { font-family: "Space Grotesk", sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; }
+.space-grotesk-700 { font-family: "Space Grotesk", sans-serif; font-optical-sizing: auto; font-weight: 700; font-style: normal; }
 
-.rethink-sans-600 { 
-    font-family: "Rethink Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
+/* UTILITY CLASSES */
+.font-lexend { font-family: var(--font-lexend-deca); }
+.font-rethink { font-family: var(--font-rethink-sans); }
+.font-space { font-family: var(--font-space-grotesk); }
+.font-bad-script { font-family: var(--font-bad-script); }
+.font-bellefair { font-family: var(--font-bellefair); }
+.font-gloock { font-family: var(--font-gloock); }
+.font-caveat { font-family: var(--font-caveat); }
+.font-indie-flower { font-family: var(--font-indie-flower); }
+.font-gloria-hallelujah { font-family: var(--font-gloria-hallelujah); }
+.font-encode-sans { font-family: var(--font-encode-sans); }
+.font-playfair { font-family: var(--font-playfair); }
 
-.rethink-sans-700 { 
-    font-family: "Rethink Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.rethink-sans-800 { 
-    font-family: "Rethink Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
-/* Rethink Sans Italic Classes */
-.rethink-sans-400-italic {
-    font-family: "Rethink Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.rethink-sans-700-italic {
-    font-family: "Rethink Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: italic;
-}
-
-/* Space Grotesk Classes */
-.space-grotesk-300 { 
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.space-grotesk-400 { 
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.space-grotesk-500 { 
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.space-grotesk-600 { 
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.space-grotesk-700 { 
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Bad Script Class */
-.bad-script-regular {
-    font-family: "Bad Script", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Bellefair Class */
-.bellefair-regular {
-    font-family: "Bellefair", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Gloock Class */
-.gloock-regular {
-    font-family: "Gloock", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Caveat Classes */
-.caveat-400 { 
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.caveat-500 { 
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.caveat-600 { 
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.caveat-700 { 
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Font utility classes using CSS Custom Properties */
-.font-lexend {
-    font-family: var(--font-lexend-deca);
-}
-
-.font-rethink {
-    font-family: var(--font-rethink-sans);
-}
-
-.font-space {
-    font-family: var(--font-space-grotesk);
-}
-
-.font-bad-script {
-    font-family: var(--font-bad-script);
-}
-
-.font-bellefair {
-    font-family: var(--font-bellefair);
-}
-
-.font-gloock {
-    font-family: var(--font-gloock);
-}
-
-.font-caveat {
-    font-family: var(--font-caveat);
-}
-
-/* Tailwind v4 Custom Styles */
 @layer base {
-    /* Base font styles */
-    h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-space-grotesk);
-        font-weight: 600; /* semi-bold */
-    }
-
-    /* Set default font family for common elements */
-    p, li, span, div {
-        font-family: var(--font-rethink-sans);
-    }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-space-grotesk); font-weight: 600; }
+  p, li, span, div { font-family: var(--font-rethink-sans); }
 }
 
 @layer components {
-    /* Component classes - font only, no sizes */
-    .font-display {
-        font-family: var(--font-gloock);
-    }
-    
-    .font-heading {
-        font-family: var(--font-lexend-deca);
-        font-weight: 700; /* bold */
-    }
-    
-    .font-body {
-        font-family: var(--font-rethink-sans);
-    }
-    
-    .font-handwritten {
-        font-family: var(--font-caveat);
-    }
-    
-    .font-cursive {
-        font-family: var(--font-bad-script);
-    }
-    
-    .font-elegant {
-        font-family: var(--font-bellefair);
-    }
-    
-    /* Button with custom font */
-    .btn-font {
-        font-family: var(--font-space-grotesk);
-        font-weight: 500; /* medium */
-    }
+  .font-display { font-family: var(--font-gloock); }
+  .font-heading { font-family: var(--font-lexend-deca); font-weight: 700; }
+  .font-body { font-family: var(--font-rethink-sans); }
+  .font-handwritten { font-family: var(--font-indie-flower); }
+  .font-cursive { font-family: var(--font-bad-script); }
+  .font-elegant { font-family: var(--font-bellefair); }
+  .btn-font { font-family: var(--font-space-grotesk); font-weight: 500; }
 }
 
 @layer utilities {
-    /* Custom utilities for font weights */
-    .font-optical-sizing {
-        font-optical-sizing: auto;
-    }
-    
-    /* Font weight utilities */
-    .font-thin {
-        font-weight: 100;
-    }
-    
-    .font-extra-light {
-        font-weight: 200;
-    }
-    
-    .font-light {
-        font-weight: 300;
-    }
-    
-    .font-normal {
-        font-weight: 400;
-    }
-    
-    .font-medium {
-        font-weight: 500;
-    }
-    
-    .font-semi-bold {
-        font-weight: 600;
-    }
-    
-    .font-bold {
-        font-weight: 700;
-    }
-    
-    .font-extra-bold {
-        font-weight: 800;
-    }
-    
-    .font-black {
-        font-weight: 900;
-    }
+  .font-optical-sizing { font-optical-sizing: auto; }
+  .font-thin { font-weight: 100; }
+  .font-extra-light { font-weight: 200; }
+  .font-light { font-weight: 300; }
+  .font-normal { font-weight: 400; }
+  .font-medium { font-weight: 500; }
+  .font-semi-bold { font-weight: 600; }
+  .font-bold { font-weight: 700; }
+  .font-extra-bold { font-weight: 800; }
+  .font-black { font-weight: 900; }
 }

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Play, Sparkles, ArrowRight, X, Zap, Star, Circle } from 'lucide-react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
+import { IndianRupee, GraduationCap, Rocket } from "lucide-react";
 
 export default function Hero() {
   const videoRef = useRef(null)
@@ -157,7 +158,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="relative container mx-auto rethink-sans-700 pt-16" ref={containerRef}>
+    <div className="relative rethink-sans-700 pt-16" ref={containerRef}>
       <style jsx>{`
         .rainbow {
           background: linear-gradient(
@@ -249,7 +250,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 flex flex-col items-center px-4 py-16"
+        className="relative z-10 flex flex-col items-center py-16"
       >
         {/* Enhanced Badge */}
         <motion.div
@@ -264,7 +265,7 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mb-5 rounded-full"
         >
-          <div className="relative text-xs inline-flex items-center gap-3 text-white px-4 py-3 font-medium shadow-lg hover:shadow-xl transition-all duration-300 rounded-full rainbow glow">
+          <div className="relative text-xs inline-flex items-center gap-3 text-white pl-4 pr-7 py-3 font-medium shadow-lg hover:shadow-xl transition-all duration-300 rounded-full rainbow glow">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
@@ -272,62 +273,64 @@ export default function Hero() {
               <Sparkles className="w-4 h-4 relative z-10" />
             </motion.div>
             <span className="relative z-10">
-              AI-powered {currentTypeText}{' '}
-              <motion.span
+              AI-powered
+               {/* {currentTypeText}{' '} */}
+              {/* <motion.span
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
                 className="text-sm"
               >
                 |
-              </motion.span>
+              </motion.span> */}
             </span>
           </div>
         </motion.div>
 
         {/* Title */}
         <div className="text-center mb-8">
-          <motion.h1
-            className="text-4xl md:text-9xl text-black lexend-deca-900 font-bold mb-6 bg-glossy-black text-center text-glow"
-            initial={{ opacity: 0, y: 20, filter: 'blur(20px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              filter: { duration: 1.2, delay: 0.5, ease: 'easeOut' },
-            }}
-          >
-            <motion.span
-              className="inline-block italic"
-              whileHover={
-                !hasRotated
-                  ? {
-                      rotateY: 360,
-                      transition: { duration: 0.6, repeat: 0 },
-                    }
-                  : {}
-              }
-              onHoverStart={() => {
-                if (!hasRotated) {
-                  setHasRotated(true)
-                }
-              }}
-            >
-              {wordAnimation('NEVER', 0)}
-            </motion.span>
-            <span className="inline-block ml-3">
-              {wordAnimation('GET', 0.3)}
-            </span>
-            <br />
-            <span className="inline-block">
-              {wordAnimation('IGNORED', 0.6)}
-            </span>
-            <span className="inline-block ml-3">
-              {wordAnimation('ONLINE', 0.9)}
-            </span>
-          </motion.h1>
+        <motion.h1
+  className="text-4xl md:text-[5.2rem] text-black lexend-deca-900 font-bold mb-3 text-center flex flex-wrap justify-center gap-x-3"
+  initial={{ opacity: 0, y: 20, filter: 'blur(20px)' }}
+  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+  transition={{
+    duration: 0.8,
+    delay: 0.5,
+    filter: { duration: 1.2, delay: 0.5, ease: 'easeOut' },
+  }}
+>
+  <motion.span
+    className="italic whitespace-nowrap inline-block md:mr-3"
+    whileHover={
+      !hasRotated
+        ? {
+            rotateY: 360,
+            transition: { duration: 0.6 },
+          }
+        : {}
+    }
+    onHoverStart={() => {
+      if (!hasRotated) setHasRotated(true)
+    }}
+  >
+    {wordAnimation(`Don't`, 0)}
+  </motion.span>
+
+  <span className="whitespace-nowrap inline-block md:mr-3">
+    {wordAnimation('GET', 0.3)}
+  </span>
+
+  <span className="whitespace-nowrap inline-block md:mr-3">
+    {wordAnimation('IGNORED', 0.6)}
+  </span>
+
+  <span className="whitespace-nowrap inline-block">
+    {wordAnimation('ONLINE', 0.9)}
+  </span>
+</motion.h1>
+
 
           <motion.p
-            className="text-lg text-gray-600 font-space leading-relaxed max-w-3xl mx-auto mb-8 font-normal"
+            className="md:text-xl text-lg text-gray-600 font-space leading-relaxed max-w-3xl mx-auto mb-8 font-normal"
             initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{
@@ -336,10 +339,8 @@ export default function Hero() {
               filter: { duration: 0.8, delay: 1.2, ease: 'easeOut' },
             }}
           >
-            Learn the system that turns any idea into trust-building, high-reach
-            content —
-            <br className="hidden md:block" />
-            with AI helping you remove guesswork and create without friction.
+            The only content course that treats you like a business, not a gambler.
+            
           </motion.p>
 
           {/* Fixed Button */}
@@ -386,10 +387,58 @@ export default function Hero() {
           </motion.button>
         </div>
 
+        <div className="w-full bg-gradient-to-r from-blue-50 to-indigo-50 border-y border-gray-200">
+  <div className="max-w-6xl mx-auto py-4">
+    <div className="flex flex-row items-center justify-center gap-2 sm:gap-12 text-gray-800 overflow-x-auto py-2">
+      
+      {/* Price */}
+      <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-4 rounded-lg sm:rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition flex-shrink-0">
+        <div className="p-1 sm:p-2 shadow rounded sm:rounded-lg">
+          <IndianRupee className="w-4 h-4 sm:w-6 sm:h-6" />
+        </div>
+        <div>
+          <p className="text-base sm:text-2xl font-bold text-gray-900 whitespace-nowrap">6,000</p>
+        </div>
+      </div>
+
+      <div className="hidden sm:block w-px h-8 sm:h-12 bg-gray-300 flex-shrink-0" />
+
+      {/* Seats */}
+      <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-4 rounded-lg sm:rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition flex-shrink-0">
+        <div className="p-1 sm:p-2 shadow rounded sm:rounded-lg">
+          <GraduationCap className="w-4 h-4 sm:w-6 sm:h-6" />
+        </div>
+        <div>
+          <p className="text-sm sm:text-lg font-bold whitespace-nowrap">
+            <span className="hidden sm:inline">Limited to </span>100 
+            <span className="text-xs sm:text-sm text-gray-600 ml-1">Students</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="hidden sm:block w-px h-8 sm:h-12 bg-gray-300 flex-shrink-0" />
+
+      {/* Launch */}
+      <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-4 rounded-lg sm:rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition flex-shrink-0">
+        <div className="p-1 sm:p-2 shadow rounded sm:rounded-lg">
+          <Rocket className="w-4 h-4 sm:w-6 sm:h-6" />
+        </div>
+        <div>
+          <p className="text-sm sm:text-lg font-bold whitespace-nowrap">
+            <span className="hidden sm:inline">January </span>2025
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
         {/* Optimized Video Container - Full Width on Mobile */}
-        <div className="">
+        <div className="max-w-6xl md:mx-auto mx-4">
           <motion.div
-            className="relative w-full mx-auto mt-16 aspect-video will-change-transform"
+            className="relative w-full mx-auto mt-6 md:mt-8 aspect-video will-change-transform"
             style={{
               scale: videoScale,
             }}

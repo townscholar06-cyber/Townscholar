@@ -1,16 +1,12 @@
-import React from 'react'
-import greenStar from '../assets/images/daddy-images/green-star.png'
-import redStar from '../assets/images/daddy-images/red-star.png'
-import arrow from '../assets/images/daddy-images/arrow.png'
-import arrow2 from '../assets/images/daddy-images/arrow2.png'
-import arrow3 from '../assets/images/daddy-images/arrow3.png'
-import arrow4 from '../assets/images/daddy-images/arrow4.png'
-import { useState, useEffect } from 'react'
-import { IoChevronDown, IoPlay, IoLockClosed } from 'react-icons/io5'
-import { CiClock1 } from 'react-icons/ci'
-import { TiDocumentText } from 'react-icons/ti'
-import { BiSolidDislike } from 'react-icons/bi'
-import { motion, AnimatePresence } from 'framer-motion'
+import React from "react";
+import greenStar from "../assets/images/daddy-images/green-star.png";
+import redStar from "../assets/images/daddy-images/red-star.png";
+import arrow from "../assets/images/daddy-images/arrow.png";
+import arrow2 from "../assets/images/daddy-images/arrow2.png";
+import arrow3 from "../assets/images/daddy-images/arrow3.png";
+import { useState, useEffect } from "react";
+import { BiSolidDislike } from "react-icons/bi";
+import { motion } from "framer-motion";
 // Additional icons for checklist
 import {
   MdGroup,
@@ -20,41 +16,39 @@ import {
   MdPeople,
   MdShare,
   MdPhoneAndroid,
-} from 'react-icons/md'
+} from "react-icons/md";
 
 const Daddy = () => {
-
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
-  })
+  });
 
   // Check if mobile device
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Mouse tracking for parallax (desktop only)
   useEffect(() => {
-    if (isMobile) return
+    if (isMobile) return;
 
     const handleMouseMove = (e) => {
       setMousePosition({
         x: (e.clientX - window.innerWidth / 2) / 50,
         y: (e.clientY - window.innerHeight / 2) / 50,
-      })
-    }
+      });
+    };
 
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [isMobile])
-
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [isMobile]);
 
   // Animation variants
   const containerVariants = {
@@ -66,7 +60,7 @@ const Daddy = () => {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const headerVariants = {
     hidden: {
@@ -82,7 +76,7 @@ const Daddy = () => {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const dotVariants = {
     hidden: { scale: 0, opacity: 0 },
@@ -90,7 +84,7 @@ const Daddy = () => {
       scale: 1,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 300,
         damping: 20,
       },
@@ -99,7 +93,7 @@ const Daddy = () => {
       scale: 1.1,
       transition: { duration: 0.3 },
     },
-  }
+  };
 
   const titleTextVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -108,11 +102,11 @@ const Daddy = () => {
       y: 0,
       transition: {
         duration: 1.2,
-        ease: 'easeOut',
+        ease: "easeOut",
         delay: 0.3,
       },
     },
-  }
+  };
 
   const arrowVariants = {
     hidden: {
@@ -126,11 +120,11 @@ const Daddy = () => {
       rotate: 0,
       transition: {
         duration: 1.2,
-        ease: 'easeOut',
+        ease: "easeOut",
         delay: 0.6,
       },
     },
-  }
+  };
 
   const letterVariants = {
     hidden: {
@@ -149,7 +143,7 @@ const Daddy = () => {
         ease: [0.34, 1.56, 0.64, 1],
       },
     },
-  }
+  };
 
   const wordVariants = {
     hidden: { opacity: 0 },
@@ -160,7 +154,7 @@ const Daddy = () => {
         delayChildren: 0.4,
       },
     },
-  }
+  };
 
   const sectionVariants = {
     hidden: {
@@ -177,7 +171,7 @@ const Daddy = () => {
         ease: [0.34, 1.56, 0.64, 1],
       },
     },
-  }
+  };
 
   const rightSectionVariants = {
     hidden: {
@@ -195,7 +189,7 @@ const Daddy = () => {
         delay: 0.6,
       },
     },
-  }
+  };
 
   const checklistVariants = {
     hidden: { opacity: 0 },
@@ -206,7 +200,7 @@ const Daddy = () => {
         delayChildren: 1,
       },
     },
-  }
+  };
 
   const checklistItemVariants = {
     hidden: {
@@ -227,39 +221,37 @@ const Daddy = () => {
       scale: 1.02,
       transition: { duration: 0.2 },
     },
-  }
-
-
+  };
 
   const spinVariants = {
     animate: {
       rotate: 360,
       transition: {
         duration: 4,
-        ease: 'linear',
+        ease: "linear",
         repeat: Infinity,
       },
     },
-  }
+  };
 
   const getParallaxVariants = () => {
-    if (isMobile) return {}
+    if (isMobile) return {};
 
     return {
       animate: {
         x: mousePosition.x,
         y: mousePosition.y,
         transition: {
-          type: 'spring',
+          type: "spring",
           stiffness: 150,
           damping: 15,
         },
       },
-    }
-  }
+    };
+  };
 
   const getSectionWithParallaxVariants = (baseVariants, parallaxMultiplier) => {
-    if (isMobile) return baseVariants
+    if (isMobile) return baseVariants;
 
     return {
       ...baseVariants,
@@ -267,44 +259,34 @@ const Daddy = () => {
         x: mousePosition.x * parallaxMultiplier.x,
         y: mousePosition.y * parallaxMultiplier.y,
         transition: {
-          type: 'spring',
+          type: "spring",
           stiffness: 150,
           damping: 15,
         },
       },
-    }
-  }
-
- 
+    };
+  };
 
   // Checklist data as arrays with icons
   const algorithmBlamerChecklist = [
-    { text: 'You constantly complain about the', icon: BiSolidDislike },
-    { text: 'You blame everyone else for lack', icon: MdGroup },
-    { text: 'You think you know best but still', icon: MdLightbulb },
+    { text: "You constantly complain about the", icon: BiSolidDislike },
+    { text: "You blame everyone else for lack", icon: MdGroup },
+    { text: "You think you know best but still", icon: MdLightbulb },
     { text: "You say you can't take your content", icon: MdTrendingDown },
-    { text: 'You rarely experiment or try', icon: MdScience },
-    { text: 'You think everyone 50/50 fit', icon: MdPeople },
-    { text: 'You think everyone 50/50 fit', icon: MdPeople },
-    { text: 'You blame social media itch', icon: MdShare },
-    { text: 'You blame social media itch', icon: MdShare },
-    { text: 'You blame social media itch', icon: MdPhoneAndroid },
-  ]
+    { text: "You rarely experiment or try", icon: MdScience },
+    { text: "You think everyone 50/50 fit", icon: MdPeople },
+    { text: "You think everyone 50/50 fit", icon: MdPeople },
+  ];
 
   const algoDaddyChecklist = [
-    { text: 'You constantly complain about the', icon: BiSolidDislike },
-    { text: 'You blame everyone else for lack', icon: MdGroup },
-    { text: 'You think you know best but still', icon: MdLightbulb },
+    { text: "You constantly complain about the", icon: BiSolidDislike },
+    { text: "You blame everyone else for lack", icon: MdGroup },
+    { text: "You think you know best but still", icon: MdLightbulb },
     { text: "You say you can't take your content", icon: MdTrendingDown },
-    { text: 'You rarely experiment or try', icon: MdScience },
-    { text: 'You think everyone 50/50 fit', icon: MdPeople },
-    { text: 'You think everyone 50/50 fit', icon: MdPeople },
-    { text: 'You blame social media itch', icon: MdShare },
-    { text: 'You blame social media itch', icon: MdShare },
-    { text: 'You blame social media itch', icon: MdPhoneAndroid },
-  ]
-
-  
+    { text: "You rarely experiment or try", icon: MdScience },
+    { text: "You think everyone 50/50 fit", icon: MdPeople },
+    { text: "You think everyone 50/50 fit", icon: MdPeople },
+  ];
 
   const renderAnimatedText = (text, className) => {
     return (
@@ -315,23 +297,23 @@ const Daddy = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {text.split('').map((letter, index) => (
+        {text.split("").map((letter, index) => (
           <motion.span
             key={index}
             className="inline-block"
             variants={letterVariants}
           >
-            {letter === ' ' ? '\u00A0' : letter}
+            {letter === " " ? "\u00A0" : letter}
           </motion.span>
         ))}
       </motion.span>
-    )
-  }
+    );
+  };
 
   // Image component replacement for the missing import
   const Image = ({ src, alt, className }) => {
-    return <img src={src} alt={alt} className={className} />
-  }
+    return <img src={src} alt={alt} className={className} />;
+  };
 
   return (
     <motion.div
@@ -379,31 +361,36 @@ const Daddy = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h1 className="text-4xl md:text-7xl text-left font-cursive font-light text-gray-800 mb-4 leading-tight">
-                your content isn't working because
+              <h1 className="text-5xl md:text-8xl text-left indie-flower-regular font-light text-gray-800 mb-4 leading-tight">
+                your content isn't working
                 <br className="hidden md:block" />
-                <span className="md:hidden"> </span>you're...
+                <span className="md:hidden"> </span>because you're...
               </h1>
             </motion.div>
 
             <motion.div
-              className="flex items-center justify-center absolute top-24 md:top-44 left-[30%] md:left-[25%]"
-              variants={{ ...arrowVariants, ...getParallaxVariants() }}
-              initial="hidden"
-              whileInView="visible"
-              animate={!isMobile ? 'animate' : undefined}
-              viewport={{ once: true }}
+              className="flex items-center justify-center absolute top-48 md:top-72 left-[38%] md:left-[35%]"
+              initial={{ y: 0, rotate: 6 }}
+              animate={{
+                y: [0, -28, 0],
+                rotate: [8, -8, 8],
+              }}
+              transition={{
+                duration: 3.6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             >
               <Image
                 src={arrow}
                 alt="arrow"
-                className="text-[FF6262] w-[120px] md:w-[170px] lg:w-64"
+                className="w-[130px] md:w-[170px] lg:w-64"
               />
             </motion.div>
           </div>
 
           {/* Two column layout */}
-          <div className="grid md:mt-56 md:grid-cols-2 gap-8 md:gap-0 items-start relative">
+          <div className="grid mt-20 md:mt-56 md:grid-cols-2 gap-8 md:gap-0 items-start relative">
             {/* Left column - Algorithm Blamer */}
             <motion.div
               className="relative mt-4 md:mt-7 lg:-rotate-3"
@@ -413,13 +400,13 @@ const Daddy = () => {
               })}
               initial="hidden"
               whileInView="visible"
-              animate={!isMobile ? 'animate' : undefined}
+              animate={!isMobile ? "animate" : undefined}
               viewport={{ once: true }}
             >
               <div className="">
                 <div className="">
                   <motion.div
-                    className="w-20 md:w-56 absolute -top-12 md:-top-36 -left-4 md:-left-16"
+                    className="w-36 md:w-56 absolute -top-20 md:-top-36 -left-10 md:-left-16"
                     variants={spinVariants}
                     animate="animate"
                   >
@@ -433,18 +420,18 @@ const Daddy = () => {
                 <div className="mt-10">
                   <h2>
                     {renderAnimatedText(
-                      'algorithm',
-                      'text-4xl md:text-5xl tracking-tighter font-bellefair font-light text-[#252524]'
+                      "algorithm",
+                      "text-4xl md:text-5xl tracking-tighter font-bellefair font-light text-[#252524]"
                     )}
                   </h2>
                   <h2>
                     {renderAnimatedText(
-                      'blamer',
-                      'text-6xl md:text-8xl font-bold tracking-tighter text-[#FF6262] mb-4'
+                      "blamer",
+                      "text-7xl md:text-8xl font-bold tracking-tighter text-[#FF6262] mb-4"
                     )}
                   </h2>
                   <motion.p
-                    className="text-sm md:text-base text-gray-600 mb-3 leading-relaxed font-space"
+                    className="text-base text-gray-600 mb-3 leading-relaxed font-space"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -465,7 +452,7 @@ const Daddy = () => {
 
               <div className="py-4 md:py-6 rounded-lg">
                 <motion.div
-                  className="space-y-1 overflow-hidden md:space-y-2 bg-[#FFF4F4] w-full md:w-[80%] border rounded-lg border-[#FFCACA] py-2 text-xs md:text-sm shadow-lg"
+                  className="space-y-1 overflow-hidden md:space-y-2 bg-[#FFB7B7] w-full md:w-[80%] border rounded-lg border-[#FF6262] py-2 text-sm shadow-lg"
                   variants={checklistVariants}
                   initial="hidden"
                   whileInView="visible"
@@ -474,13 +461,15 @@ const Daddy = () => {
                   {algorithmBlamerChecklist.map((item, index) => (
                     <motion.div
                       key={index}
-                      className="border-b last:border-b-0 font-space border-[#FFCACA]"
+                      className="border-b last:border-b-0 font-space border-[#FF6262]"
                       variants={checklistItemVariants}
                       whileHover="hover"
                     >
                       <div className="flex items-center gap-2 p-2 md:p-3">
                         <item.icon className="w-3 h-3 md:w-4 md:h-4 text-red-500 flex-shrink-0" />
-                        <span className="leading-snug font-space">{item.text}</span>
+                        <span className="leading-snug font-space">
+                          {item.text}
+                        </span>
                       </div>
                     </motion.div>
                   ))}
@@ -490,14 +479,14 @@ const Daddy = () => {
 
             {/* Right column - AI Daddy */}
             <motion.div
-              className="relative md:mt-40 lg:mt-56"
+              className="relative mt-16 md:mt-40 lg:mt-56"
               variants={getSectionWithParallaxVariants(rightSectionVariants, {
                 x: -0.3,
                 y: 0.2,
               })}
               initial="hidden"
               whileInView="visible"
-              animate={!isMobile ? 'animate' : undefined}
+              animate={!isMobile ? "animate" : undefined}
               viewport={{ once: true }}
             >
               <motion.div
@@ -505,11 +494,12 @@ const Daddy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.2 }}
+                className="hidden md:block md:-ml-24"
               >
                 <Image
                   src={arrow2}
                   alt="arrow"
-                  className="w-[120px] md:w-[170px] lg:w-[250px] drop-shadow-sm"
+                  className="w-[120px] md:w-[170px] lg:w-[300px] drop-shadow-sm"
                 />
               </motion.div>
 
@@ -517,7 +507,7 @@ const Daddy = () => {
                 <div className="">
                   <div className="flex items-end md:justify-center w-full">
                     <motion.div
-                      className="w-20 md:w-40 absolute -top-12 md:-top-32 -left-4 md:left-72"
+                      className="w-28 md:w-48 absolute -top-20 md:-top-48 -left-4 md:left-72"
                       variants={spinVariants}
                       animate="animate"
                     >
@@ -528,17 +518,17 @@ const Daddy = () => {
                       />
                     </motion.div>
                   </div>
-                  <div className="flex flex-col md:items-center mt-8 md:mt-0 justify-center">
+                  <div className="flex flex-col md:items-end mt-8 md:mt-0 justify-end md:w-[90%]">
                     <h2>
                       {renderAnimatedText(
-                        'algo',
-                        'text-4xl md:text-5xl tracking-tighter font-light font-bellefair'
+                        "algo",
+                        "text-4xl md:text-5xl tracking-tighter font-light font-bellefair"
                       )}
                     </h2>
                     <h2>
                       {renderAnimatedText(
-                        'daddy',
-                        'text-6xl md:text-8xl font-bold tracking-tighter text-[#00CC94] mb-4'
+                        "daddy",
+                        "text-7xl md:text-8xl font-bold tracking-tighter text-[#00CC94] mb-4"
                       )}
                     </h2>
                     <motion.h2
@@ -551,14 +541,13 @@ const Daddy = () => {
                       (with an AI sidekick)
                     </motion.h2>
                     <motion.p
-                      className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 text-left md:text-right leading-relaxed font-space"
+                      className="text-base text-gray-600 mb-4 md:mb-6 text-left md:text-right leading-relaxed font-space"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 1 }}
                     >
-                      You're not guessing anymore
-                      <br />— you're structuring.
+                      You're not guessing anymore — you're structuring.
                       <br />
                       Trust content trends and aren't flexible
                       <br />
@@ -573,7 +562,7 @@ const Daddy = () => {
 
                 <div className="rounded-lg">
                   <motion.div
-                    className="space-y-1 md:space-y-2 bg-[#F4FFFC] border w-full md:w-[80%] mx-auto rounded-lg border-[#A4FFE6] py-2 text-xs md:text-sm relative shadow-lg overflow-hidden"
+                    className="space-y-1 md:space-y-2 bg-[#C4FFCB] border w-full md:w-[80%] mx-auto rounded-lg border-[#24C637] py-2 text-sm relative shadow-lg overflow-hidden"
                     variants={checklistVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -582,15 +571,19 @@ const Daddy = () => {
                     {algoDaddyChecklist.map((item, index) => (
                       <motion.div
                         key={index}
-                        className="border-b last:border-b-0 border-[#A4FFE6] font-space"
+                        className="border-b last:border-b-0 border-[#24C637] font-space"
                         variants={checklistItemVariants}
                         whileHover="hover"
                       >
                         <div
-                          className={`flex items-center gap-2 font-space ${index < 2 ? 'p-3' : 'p-2 md:p-3'}`}
+                          className={`flex items-center gap-2 font-space ${
+                            index < 2 ? "p-3" : "p-2 md:p-3"
+                          }`}
                         >
-                          <item.icon className="w-3 h-3 md:w-4 md:h-4 text-green-600 flex-shrink-0" />
-                          <span className="leading-snug font-space">{item.text}</span>
+                          <item.icon className="w-4 h-4 md:w-4 md:h-4 text-green-600 flex-shrink-0" />
+                          <span className="leading-snug font-space">
+                            {item.text}
+                          </span>
                         </div>
                       </motion.div>
                     ))}
@@ -612,14 +605,10 @@ const Daddy = () => {
               </div>
             </motion.div>
           </div>
-
-         
         </div>
       </div>
-
-    
     </motion.div>
-  )
-}
+  );
+};
 
-export default Daddy
+export default Daddy;

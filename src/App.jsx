@@ -10,7 +10,7 @@ import Header from './components/Header'
 import Clients from './components/Clients'
 import Founder from './components/Founder'
 import FAQ from './components/FAQ'
-import { Puzzle } from 'lucide-react'
+import  Puzzle  from './components/Puzzle'
 import Learning from './components/Learning'
 // import { Dummy } from './components/Dummy'
 
