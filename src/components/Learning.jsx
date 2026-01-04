@@ -1,7 +1,7 @@
 import React from 'react'
 import arrow from '../assets/images/learning-arrow.png'
 import { useState } from 'react'
-import { IoChevronDown, IoPlay } from 'react-icons/io5'
+import { IoChevronDown, IoPlay, IoLockClosed } from 'react-icons/io5'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Learning() {
@@ -21,148 +21,158 @@ export default function Learning() {
   
   const modules = [
     {
-      title: 'Module 1: Positioning — What You\'re Actually Known For',
+      title: 'MODULE 1: Understanding Content Today',
       isExpanded: true,
-      description: "Most people jump straight into posting. That's why they get stuck. If someone watches a few of your posts and still can't answer: 'What is this person actually about?' Your content will never scale.",
+      description: "Master the fundamentals of modern content creation and understand why content is the most powerful leverage in today's digital landscape.",
       lessons: [
         { 
-          title: 'Clearly define what you should talk about (and what to ignore)', 
+          title: 'Video 1 - When Content Becomes Leverage', 
           type: 'video', 
           icon: IoPlay 
         },
         {
-          title: 'Stop copying others in your niche',
+          title: 'Video 2 - How Attention Turns Into Opportunity',
           type: 'video',
           icon: IoPlay,
         },
         {
-          title: 'Position yourself so people recognise you within a few posts',
+          title: 'Video 3 - The Lowest-Risk Way to Start',
           type: 'video',
           icon: IoPlay,
         },
         { 
-          title: 'AI-assisted exercises to remove blind spots and speed up clarity', 
+          title: 'Video 4 - What Makes Content Survive', 
           type: 'video', 
           icon: IoPlay 
         },
       ],
-      outcome: 'When positioning is right, content becomes easier.'
+      outcome: 'Understand why content is the most powerful leverage in the digital age',
+      isLocked: false
     },
     {
-      title: 'Module 2: Pre-Production — Writing That Actually Holds Attention',
+      title: 'MODULE 2: Why People Choose You (a.k.a Positioning)',
+      isExpanded: false,
+      description: "Learn the art of positioning yourself uniquely in a crowded market so people naturally choose you over competitors.",
+      lessons: [
+        { 
+          title: 'Video 1 - The Art of Positioning', 
+          type: 'video', 
+          icon: IoPlay 
+        },
+        {
+          title: 'Video 2 - The EEE Advantage',
+          type: 'video',
+          icon: IoPlay,
+        },
+        {
+          title: 'Video 3 - Define Your Positioning (AI-guided)',
+          type: 'video',
+          icon: IoPlay,
+        },
+        { 
+          title: 'Video 4 - You Are the Niche', 
+          type: 'video', 
+          icon: IoPlay 
+        },
+      ],
+      outcome: 'Develop a unique positioning that makes people choose you naturally',
+      isLocked: false
+    },
+    {
+      title: 'MODULE 3: Writing Is the Real Work (a.k.a Pre-Production)',
       isExpanded: false,
       description: "This is the most important module in the course. Editing can enhance content. But writing creates it. This is where most creators struggle — and where most growth actually comes from.",
       lessons: [
         { 
-          title: 'How to think before you write', 
+          title: 'Video 1 - How to think before you write', 
           type: 'video', 
           icon: IoPlay 
         },
         {
-          title: 'How to write hooks that work without fancy edits',
+          title: 'Video 2 - How to write hooks that work without fancy edits',
           type: 'video',
           icon: IoPlay,
         },
         {
-          title: 'How to structure ideas so people stay till the end',
+          title: 'Video 3 - How to structure ideas so people stay till the end',
           type: 'video',
           icon: IoPlay,
         },
         { 
-          title: 'How to turn scattered thoughts into clear scripts', 
+          title: 'Video 4 - How to turn scattered thoughts into clear scripts', 
           type: 'video', 
           icon: IoPlay 
         },
       ],
-      outcome: 'When your writing is strong, you don\'t need to depend on the algorithm to save your content.'
+      outcome: 'When your writing is strong, you don\'t need to depend on the algorithm to save your content.',
+      isLocked: true
     },
     {
-      title: 'Module 3: Production — Translating Ideas to Camera',
+      title: 'MODULE 4: Talking to the Camera (a.k.a Production)',
       isExpanded: false,
       description: "You don't need expensive gear. You don't need complex setups. You need clarity on how to translate ideas naturally on camera.",
       lessons: [
         { 
-          title: 'How to speak on camera naturally', 
+          title: 'Video 1 - How to speak on camera naturally', 
           type: 'video', 
           icon: IoPlay 
         },
         {
-          title: 'How to set yourself up so your personality shows',
+          title: 'Video 2 - How to set yourself up so your personality shows',
           type: 'video',
           icon: IoPlay,
         },
         {
-          title: 'How to record content that feels effortless, not forced',
+          title: 'Video 3 - How to record content that feels effortless, not forced',
           type: 'video',
           icon: IoPlay,
         },
         { 
-          title: 'Feel comfortable on camera and reduce retakes', 
+          title: 'Video 4 - Feel comfortable on camera and reduce retakes', 
           type: 'video', 
           icon: IoPlay 
         },
       ],
-      outcome: 'Good production makes content feel human.'
+      outcome: 'Good production makes content feel human.',
+      isLocked: true
     },
     {
-      title: 'Module 4: Post-Production — Editing That Supports the Idea',
+      title: 'MODULE 5: What Editing Should and Shouldn\'t Do (a.k.a Post-Production)',
       isExpanded: false,
       description: "Editing should serve the message, not distract from it. This includes complete knowledge transfer from a professional editor, so editing stops feeling mysterious or overwhelming.",
       lessons: [
         { 
-          title: 'What actually matters in editing', 
+          title: 'Video 1 - What actually matters in editing', 
           type: 'video', 
           icon: IoPlay 
         },
         {
-          title: 'What is unnecessary noise in editing',
+          title: 'Video 2 - What is unnecessary noise in editing',
           type: 'video',
           icon: IoPlay,
         },
         {
-          title: 'How pacing, cuts, and visuals support storytelling',
+          title: 'Video 3 - How pacing, cuts, and visuals support storytelling',
           type: 'video',
           icon: IoPlay,
         },
         { 
-          title: 'What to tell your editor (or how to do it yourself)', 
+          title: 'Video 4 - What to tell your editor (or how to do it yourself)', 
           type: 'video', 
           icon: IoPlay 
         },
       ],
-      outcome: 'You\'ll know exactly what to do with your editing process.'
-    },
-    {
-      title: 'Module 5: The Complete Content System',
-      isExpanded: false,
-      description: "By the end of the course, you won't just have 'better content'. You'll have a complete system you can reuse — again and again.",
-      lessons: [
-        { 
-          title: 'Putting it all together: Your repeatable system', 
-          type: 'video', 
-          icon: IoPlay 
-        },
-        {
-          title: 'No guessing, no chasing trends - just a clear process',
-          type: 'video',
-          icon: IoPlay,
-        },
-        {
-          title: 'What to do when the algorithm changes',
-          type: 'video',
-          icon: IoPlay,
-        },
-        { 
-          title: 'Review: Clarity, confidence, and consistency', 
-          type: 'video', 
-          icon: IoPlay 
-        },
-      ],
-      outcome: 'Just a clear process that works. No panic when the algorithm changes.'
+      outcome: 'You\'ll know exactly what to do with your editing process.',
+      isLocked: true
     },
   ]
 
   const toggleModule = (index) => {
+    // Don't toggle if module is locked
+    if (modules[index].isLocked) {
+      return;
+    }
+    
     setOpenModules((prev) => {
       if (prev[index]) {
         return { [index]: false }
@@ -251,6 +261,7 @@ export default function Learning() {
       {/* Bottom text */}
       <motion.div
         className="md:text-center mt-8 md:mt-28"
+        id='modules'
         variants={bottomVariants}
         initial="hidden"
         whileInView="visible"
@@ -260,7 +271,7 @@ export default function Learning() {
           className="text-4xl md:text-6xl indie-flower-regular font-light text-gray-800 mb-4 md:mb-6 leading-snug md:leading-tight px-2"
           variants={bottomVariants}
         >
-          here's what you'll be learning:{`)`}
+          here's what you'll be learning :{`)`}
         </motion.h3>
         <motion.p
           className="text-base md:text-lg space-grotesk-300 text-gray-600 leading-relaxed px-2 md:px-0 mb-4"
@@ -275,23 +286,23 @@ export default function Learning() {
       </motion.div>
       
       <motion.div 
-            className="flex justify-center mt-6 md:mt-10"
-            variants={itemVariants}
-          >
-            <motion.img
-              src={arrow}
-              alt="Arrow"
-              className="w-10 md:w-16"
-              animate={{
-                y: [-8, 8, -8],
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </motion.div>
+        className="flex justify-center mt-6 md:mt-10"
+        variants={itemVariants}
+      >
+        <motion.img
+          src={arrow}
+          alt="Arrow"
+          className="w-10 md:w-16"
+          animate={{
+            y: [-8, 8, -8],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </motion.div>
 
       {/* Modules section */}
       <motion.div
@@ -308,46 +319,68 @@ export default function Learning() {
             variants={moduleVariants}
           >
             <motion.div
-              className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden border border-gray-200"
-              whileHover={{ boxShadow: "0 10px 30px -10px rgba(0, 133, 204, 0.15)" }}
+              className={`bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden border ${module.isLocked ? 'border-gray-300' : 'border-gray-200'}`}
+              whileHover={{ 
+                boxShadow: module.isLocked 
+                  ? "0 5px 15px -5px rgba(0, 0, 0, 0.1)" 
+                  : "0 10px 30px -10px rgba(0, 133, 204, 0.15)" 
+              }}
               transition={{ duration: 0.3 }}
             >
+              {/* Module Header */}
               <motion.div
-                className="flex items-start md:items-center justify-between p-4 md:p-6 cursor-pointer hover:bg-gray-50"
+                className={`flex items-start md:items-center justify-between p-4 md:p-6 cursor-pointer ${module.isLocked ? 'cursor-not-allowed bg-gray-50' : 'hover:bg-gray-50'}`}
                 onClick={() => toggleModule(index)}
-                whileHover={{ backgroundColor: '#f8fafc' }}
+                whileHover={!module.isLocked ? { backgroundColor: '#f8fafc' } : {}}
                 transition={{ duration: 0.3 }}
               >
                 <div className="flex items-start space-x-3 md:space-x-4 flex-1">
                   <div 
-                    className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-lg flex-shrink-0 mt-1 md:mt-0"
+                    className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-lg flex-shrink-0 mt-1 md:mt-0 ${module.isLocked ? 'opacity-70' : ''}`}
                     style={{ 
-                      background: `linear-gradient(135deg, ${colors.primary}, ${colors.primaryDark})`
+                      background: module.isLocked 
+                        ? 'linear-gradient(135deg, #9ca3af, #6b7280)'
+                        : `linear-gradient(135deg, ${colors.primary}, ${colors.primaryDark})`
                     }}
                   >
-                    {index + 1}
+                    {module.isLocked ? (
+                      <IoLockClosed className="w-4 h-4 md:w-5 md:h-5" />
+                    ) : (
+                      index + 1
+                    )}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-gray-900 text-base md:text-xl leading-tight mb-1 md:mb-0">
-                      {module.title}
-                    </h3>
-                    <p className="text-gray-600 text-xs md:text-sm md:mt-1 max-w-2xl">
+                    <div className="flex items-center gap-2 md:gap-3 mb-1">
+                      <h3 className={`font-bold text-gray-900 text-base md:text-xl leading-tight ${module.isLocked ? 'text-gray-600' : ''}`}>
+                        {module.title}
+                      </h3>
+                      {module.isLocked && (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-200 text-gray-700 text-xs font-semibold rounded-full">
+                          <IoLockClosed className="w-3 h-3" />
+                          LOCKED
+                        </span>
+                      )}
+                    </div>
+                    <p className={`text-xs md:text-sm md:mt-1 max-w-2xl ${module.isLocked ? 'text-gray-500' : 'text-gray-600'}`}>
                       {module.description}
                     </p>
                   </div>
                 </div>
 
-                <motion.div
-                  animate={{ rotate: openModules[index] ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="ml-2 md:ml-4 flex-shrink-0 mt-1 md:mt-0"
-                >
-                  <IoChevronDown className="w-5 h-5 md:w-6 md:h-6" style={{ color: colors.primary }} />
-                </motion.div>
+                {!module.isLocked && (
+                  <motion.div
+                    animate={{ rotate: openModules[index] ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="ml-2 md:ml-4 flex-shrink-0 mt-1 md:mt-0"
+                  >
+                    <IoChevronDown className="w-5 h-5 md:w-6 md:h-6" style={{ color: colors.primary }} />
+                  </motion.div>
+                )}
               </motion.div>
 
+              {/* Module Content - Only show if not locked and expanded */}
               <AnimatePresence>
-                {openModules[index] && (
+                {!module.isLocked && openModules[index] && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
@@ -359,7 +392,7 @@ export default function Learning() {
                       {/* Lessons */}
                       <div className="mb-4 md:mb-6">
                         <h4 className="font-semibold text-gray-800 mb-3 md:mb-4 text-base md:text-lg">
-                          In this module, you'll learn how to:
+                          In this module, you'll learn:
                         </h4>
                         <motion.div
                           className="space-y-2 md:space-y-3"
@@ -398,39 +431,23 @@ export default function Learning() {
                         </motion.div>
                       </div>
 
-                      {/* Outcome */}
-                      <motion.div 
-                        className="p-3 md:p-4 rounded-lg md:rounded-xl border"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        style={{ 
-                          background: `linear-gradient(135deg, #f0f9ff, ${colors.primaryLight}15)`,
-                          borderColor: colors.primaryLight
-                        }}
-                      >
-                        <div className="flex items-start space-x-2 md:space-x-3">
-                          <div className="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                            style={{ backgroundColor: colors.primaryLight + '40' }}>
-                            <span className="font-bold" style={{ color: colors.primaryDark }}>→</span>
-                          </div>
-                          <p className="font-medium italic text-sm md:text-base" style={{ color: colors.primaryDark }}>
-                            {module.outcome}
-                          </p>
-                        </div>
-                      </motion.div>
+                      
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
+
+             
             </motion.div>
           </motion.div>
         ))}
       </motion.div>
 
+      
+
       {/* System Benefits Section */}
       <motion.div 
-        className="mt-8 md:mt-12 mb-6 md:mb-8 p-4 md:p-6 rounded-xl md:rounded-2xl border"
+        className="mt-4 md:mt-6 mb-6 md:mb-8 p-4 md:p-6 rounded-xl md:rounded-2xl border"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -491,12 +508,48 @@ export default function Learning() {
             </div>
           </div>
         </div>
-        <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t" style={{ borderColor: colors.primaryLight }}>
-          <p className="text-gray-700 italic text-center text-sm md:text-base">
-            Most importantly: You'll have a system you can reuse — again and again.
-            No guessing. No chasing trends. No panic when the algorithm changes.
-            Just a clear process that works.
-          </p>
+      </motion.div>
+
+      {/* Live Session Notes Section */}
+      <motion.div 
+        className="mt-6 md:mt-8 p-4 md:p-5 rounded-lg md:rounded-xl border mb-8 md:mb-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        style={{ 
+          background: `linear-gradient(135deg, #fefce8, ${colors.primaryLight}10)`,
+          borderColor: colors.primaryLight + '60',
+          borderStyle: 'dashed',
+          borderWidth: '2px'
+        }}
+      >
+        <div className="flex items-start space-x-2 md:space-x-3">
+          <div className="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+            style={{ 
+              backgroundColor: colors.primaryLight + '30',
+              border: `2px solid ${colors.primaryLight}60`
+            }}>
+            <span className="font-bold text-xs md:text-sm" style={{ color: colors.primaryDark }}>ℹ</span>
+          </div>
+          <div className="flex-1">
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              <span className="font-semibold" style={{ color: colors.primaryDark }}>Along with the recorded modules, there is one live Content Review Session every month.</span>
+              <br/><br/>
+              In this session, we review the activities completed by students as part of the course.
+              <br/><br/>
+              This includes: <br />
+              • Content drafts <br />
+              • Short-form videos created using the framework <br />
+              • Common patterns, mistakes, and improvements
+              <br/><br/>
+              <span className="italic text-gray-600">This is not a lecture or a repeat of the modules.</span>
+              <br/>
+              <span className="font-medium" style={{ color: colors.primaryDark }}>It's a working session focused on applying what you've learned.</span>
+              <br/><br/>
+              Each live session is recorded. From the date you join the course, you will have access to the most recent session recording for 3 months.
+            </p>
+          </div>
         </div>
       </motion.div>
 
@@ -508,8 +561,11 @@ export default function Learning() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.button
-          className="text-white bg-black px-6 md:px-10 py-3 md:py-5 rounded-full font-bold text-base md:text-xl shadow-xl hover:shadow-2xl md:w-auto"
+        <motion.a
+          href="https://academy.townscholar.com/web/checkout/695911a32a8a809684b5178f"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white bg-black px-6 md:px-10 py-3 md:py-5 rounded-full font-bold text-sm md:text-base shadow-xl hover:shadow-2xl md:w-auto"
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
@@ -519,10 +575,10 @@ export default function Learning() {
           }}
         >
           <span className="flex items-center justify-center space-x-2">
-            <span>Watch the video now</span>
+            <span>Enroll Now to Unlock All Modules</span>
             <span className="ml-1 md:ml-2">→</span>
           </span>
-        </motion.button>
+        </motion.a>
       </motion.div>
     </div>
   )

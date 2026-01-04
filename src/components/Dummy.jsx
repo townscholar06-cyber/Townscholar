@@ -133,7 +133,7 @@ export function Dummy() {
               
               <div className="text-center mb-8">
                 <div className="inline-flex items-baseline gap-1 mb-4">
-                  <span className="text-4xl md:text-5xl font-bold">₹6,000</span>
+                  <span className="text-4xl md:text-5xl font-bold">₹5,999</span>
                   <span className="text-gray-300">for the complete system</span>
                 </div>
                 <p className="text-gray-300 mb-2">

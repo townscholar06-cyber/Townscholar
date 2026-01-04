@@ -275,7 +275,7 @@ export default function Clients() {
   }, [currentIndex, clientCases.length]);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 pt-6 pb-16 md:py-20 space-grotesk-300">
+    <div className="max-w-6xl mx-auto px-4 pt-6 pb-16 md:py-20 space-grotesk-300" id="clients">
       {/* Heading */}
       <div className="max-w-4xl">
         <h1 className="text-4xl md:text-6xl indie-flower-regular leading-tight font-medium text-black">
@@ -472,15 +472,18 @@ export default function Clients() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.button
-          className="bg-black text-white px-8 md:px-16 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg shadow-xl hover:shadow-2xl"
+        <motion.a
+        href="https://academy.townscholar.com/web/checkout/695911a32a8a809684b5178f"
+        target="_blank"
+        rel="noopener noreferrer"
+          className="bg-black text-white px-8 md:px-16 py-3 md:py-4 rounded-full font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl"
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
           animate="wiggle"
         >
           Take Action Now !
-        </motion.button>
+        </motion.a>
       </motion.div>
 
       <style jsx>{`

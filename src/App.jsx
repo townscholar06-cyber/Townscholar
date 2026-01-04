@@ -12,12 +12,14 @@ import Founder from './components/Founder'
 import FAQ from './components/FAQ'
 import  Puzzle  from './components/Puzzle'
 import Learning from './components/Learning'
+import PopUp from './components/PopUp'
 // import { Dummy } from './components/Dummy'
 
 export default function App() {
   return (
     <div className="bg-slate-50 overflow-hidden">
       <Header/>
+      <PopUp/>
       <Hero />
       <Founder/>
       <Daddy />

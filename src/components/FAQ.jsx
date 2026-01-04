@@ -311,8 +311,11 @@ const testimonials = [
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.button
-          className="text-white bg-black px-8 md:px-16 py-3 md:py-5 rounded-full font-bold text-base md:text-xl shadow-xl hover:shadow-2xl md:w-auto"
+        <motion.a
+        href="https://academy.townscholar.com/web/checkout/695911a32a8a809684b5178f"
+        target="_blank"
+        rel="noopener noreferrer"
+          className="text-white bg-black px-8 md:px-16 py-3 md:py-5 rounded-full font-bold text-sm md:text-base shadow-xl hover:shadow-2xl md:w-auto"
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
@@ -325,7 +328,7 @@ const testimonials = [
             <span>Take Action Now !</span>
             <span className="ml-1 md:ml-2">→</span>
           </span>
-        </motion.button>
+        </motion.a>
       </motion.div>
           </div>
         </div>
@@ -399,6 +402,7 @@ const testimonials = [
     <motion.div 
       ref={pricingRef}
       className="min-h-screen bg-white p-8 md:p-12 lg:p-16"
+      id='pricing'
       initial="hidden"
       animate={isPricingInView ? 'visible' : 'hidden'}
       variants={sectionVariants}
@@ -410,7 +414,7 @@ const testimonials = [
             className="text-3xl md:text-7xl indie-flower-regular font-bold mb-2"
             variants={blurTextVariants}
           >
-            but <span className="bg-[#FF0000]/45 px-2 indie-flower-regular">why ₹6,000?</span>
+            but <span className="bg-[#FF0000]/45 px-2 indie-flower-regular">why ₹5,999?</span>
           </motion.h1>
           <motion.p 
             className="text-2xl text-gray-600 italic indie-flower-regular"
@@ -456,7 +460,7 @@ const testimonials = [
           variants={blurTextVariants}
           transition={{ delay: 0.5 }}
         >
-          <h2 className="text-xl font-bold mb-4">What ₹6,000 actually buys you:</h2>
+          <h2 className="text-xl font-bold mb-4">What ₹5,999 actually buys you:</h2>
           <ul className="space-y-2 list-disc pl-4 text-lg ml-5">
             <li className="text-gray-700">10 hours of focused training (not filler, not theory)</li>
             <li className="text-gray-700">AI-powered positioning tool (builds your topic bank automatically)</li>
@@ -474,7 +478,7 @@ const testimonials = [
         >
           <h2 className="text-xl font-bold mb-4">The math that matters:</h2>
           <p className="text-gray-700 text-lg mb-4">
-            If this course helps you land <span className="font-semibold">one brand deal</span> (₹50,000-₹1,00,000), you've made your money back. If it helps you grow consistently and turn content into a side income, ₹6,000 is nothing. If it saves you 6 months of trial and error, you've saved something priceless: <span className="font-semibold">time.</span>
+            If this course helps you land <span className="font-semibold">one brand deal</span> (₹50,000-₹1,00,000), you've made your money back. If it helps you grow consistently and turn content into a side income, ₹5,999 is nothing. If it saves you 6 months of trial and error, you've saved something priceless: <span className="font-semibold">time.</span>
           </p>
           <p className="text-gray-700 text-lg italic">This isn't a course. It's leverage.</p>
         </motion.div>
@@ -493,8 +497,11 @@ const testimonials = [
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.button
-          className="text-white bg-black px-8 md:px-16 py-3 md:py-5 rounded-full font-bold text-base md:text-xl shadow-xl hover:shadow-2xl md:w-auto"
+        <motion.a
+        href="https://academy.townscholar.com/web/checkout/695911a32a8a809684b5178f"
+        target="_blank"
+        rel="noopener noreferrer"
+          className="text-white bg-black px-8 md:px-16 py-3 md:py-5 rounded-full font-bold text-sm md:text-base shadow-xl hover:shadow-2xl md:w-auto"
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
@@ -507,7 +514,7 @@ const testimonials = [
             <span>Take Action Now !</span>
             <span className="ml-1 md:ml-2">→</span>
           </span>
-        </motion.button>
+        </motion.a>
       </motion.div>
           </div>
         </div>

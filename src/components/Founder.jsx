@@ -7,11 +7,18 @@ import youtube from "../assets/images/yt.png";
 import profile from "../assets/images/epaphra.png";
 import dp from "../assets/images/epaphra-dp.png";
 
-import ditto from "../assets/images/ditto.png";
-import kent from "../assets/images/kent.png";
-import apple from "../assets/images/apple.png";
-import zoho from "../assets/images/zoho.png";
-import a2b from "../assets/images/A2B.png";
+import ditto from "../assets/images/brands/ditto.png";
+import kent from "../assets/images/brands/kent.png";
+import apple from "../assets/images/brands/apple.png";
+import zoho from "../assets/images/brands/zoho.png";
+import a2b from "../assets/images/brands/A2B.png";
+import acko from "../assets/images/brands/acko.png";
+import groww from "../assets/images/brands/groww.png";
+import hostinger from "../assets/images/brands/hostinger.png";
+import indiabonds from "../assets/images/brands/indiabonds.png";
+import lenskart from "../assets/images/brands/lenskart.png";
+import makemytrip from "../assets/images/brands/makemytrip.png";
+import wealth from "../assets/images/brands/wealth.png";
 
 // Counter component with proper counting
 const Counter = ({ end, suffix = "", delay = 0 }) => {
@@ -79,41 +86,41 @@ const dotVariants = {
 };
 
 export default function Founder() {
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = useState(true);
 
   // Using useInView for the entire section triggers
   const sectionRef = useRef(null);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#fafafa] md:py-16">
-      <div className="rounded-t-lg max-w-6xl md:mx-auto mb-8 md:mb-16 mx-4">
+    <section ref={sectionRef} className="w-full bg-[#fafafa] md:py-16" id="about">
+      <div className="rounded-t-lg max-w-6xl lg:mx-auto mb-8 md:mb-16 mx-4">
+        <motion.div
+          className="flex items-center space-x-2"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <motion.div
-            className="flex items-center space-x-2"
-            variants={headerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="w-8 h-8 bg-[#FF6262] rounded-full"
-              variants={dotVariants}
-              whileHover="hover"
-            />
-            <motion.div
-              className="w-8 h-8 bg-[#FFCB20] rounded-full"
-              variants={dotVariants}
-              whileHover="hover"
-            />
-            <motion.div
-              className="w-8 h-8 bg-[#76FF86] rounded-full"
-              variants={dotVariants}
-              whileHover="hover"
-            />
-          </motion.div>
-        </div>
+            className="w-8 h-8 bg-[#FF6262] rounded-full"
+            variants={dotVariants}
+            whileHover="hover"
+          />
+          <motion.div
+            className="w-8 h-8 bg-[#FFCB20] rounded-full"
+            variants={dotVariants}
+            whileHover="hover"
+          />
+          <motion.div
+            className="w-8 h-8 bg-[#76FF86] rounded-full"
+            variants={dotVariants}
+            whileHover="hover"
+          />
+        </motion.div>
+      </div>
       <div className="max-w-6xl mx-auto px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-8">
         {/* LEFT COLUMN */}
-        
+
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -137,7 +144,7 @@ export default function Founder() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: true }}
-            className="relative flex items-center w-full max-w-xl mx-auto"
+            className="relative flex items-center w-full mx-auto"
           >
             {/* Icon */}
             <div className="absolute left-0 z-10 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden">
@@ -166,7 +173,7 @@ export default function Founder() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative flex items-center w-full max-w-xl mx-auto"
+            className="relative flex items-center w-full mx-auto"
           >
             {/* Icon */}
             <div className="absolute left-0 z-10 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden">
@@ -195,7 +202,7 @@ export default function Founder() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             viewport={{ once: true }}
-            className="relative flex items-center w-full max-w-xl mx-auto"
+            className="relative flex items-center w-full mx-auto"
           >
             {/* Icon */}
             <div className="absolute left-0 z-10 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden">
@@ -228,9 +235,15 @@ export default function Founder() {
           <div className="p-6">
             <div>
               <div className="flex gap-4 items-start">
-                <img src={dp} alt="dp" className="md:w-20 md:h-20 w-16 h-16 rounded-full" />
+                <img
+                  src={dp}
+                  alt="dp"
+                  className="md:w-20 md:h-20 w-16 h-16 rounded-full"
+                />
                 <div>
-                  <h3 className="font-semibold text-xl md:text-2xl">Epaphra T</h3>
+                  <h3 className="font-semibold text-xl md:text-2xl">
+                    Epaphra T
+                  </h3>
                   <p className="text-sm md:text-lg text-gray-500">
                     Founder TownScholar | Storyteller | Podcast Host
                   </p>
@@ -407,9 +420,58 @@ export default function Founder() {
                         className:
                           "h-10 sm:h-12 transition-transform duration-300 ease-out hover:scale-110",
                       },
+                      {
+                        src: acko,
+                        alt: "Acko",
+                        className:
+                          "h-10 sm:h-12 transition-transform duration-300 ease-out hover:scale-110",
+                      },
+                      {
+                        src: groww,
+                        alt: "Groww",
+                        className:
+                          "h-10 sm:h-12 transition-transform duration-300 ease-out hover:scale-110",
+                      },
+                      {
+                        src: hostinger,
+                        alt: "Hostinger",
+                        className:
+                          "h-11 sm:h-13 transition-transform duration-300 ease-out hover:scale-110",
+                      },
+                      {
+                        src: indiabonds,
+                        alt: "IndiaBonds",
+                        className:
+                          "h-10 sm:h-12 transition-transform duration-300 ease-out hover:scale-110",
+                      },
+                      {
+                        src: lenskart,
+                        alt: "Lenskart",
+                        className:
+                          "h-10 sm:h-12 transition-transform duration-300 ease-out hover:scale-110",
+                      },
+                      {
+                        src: makemytrip,
+                        alt: "MakeMyTrip",
+                        className:
+                          "h-11 sm:h-13 transition-transform duration-300 ease-out hover:scale-110",
+                      },
+                      {
+                        src: wealth,
+                        alt: "Wealth",
+                        className:
+                          "h-10 sm:h-12 transition-transform duration-300 ease-out hover:scale-110",
+                      },
                     ].map((logo, index) => (
-                      <div key={`${setIndex}-${index}`} className="flex-shrink-0">
-                        <img src={logo.src} alt={logo.alt} className={logo.className} />
+                      <div
+                        key={`${setIndex}-${index}`}
+                        className="flex-shrink-0"
+                      >
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className={logo.className}
+                        />
                       </div>
                     ))}
                   </div>

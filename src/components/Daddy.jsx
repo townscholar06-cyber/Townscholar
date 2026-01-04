@@ -3,19 +3,26 @@ import greenStar from "../assets/images/daddy-images/green-star.png";
 import redStar from "../assets/images/daddy-images/red-star.png";
 import arrow from "../assets/images/daddy-images/arrow.png";
 import arrow2 from "../assets/images/daddy-images/arrow2.png";
-import arrow3 from "../assets/images/daddy-images/arrow3.png";
 import { useState, useEffect } from "react";
-import { BiSolidDislike } from "react-icons/bi";
 import { motion } from "framer-motion";
 // Additional icons for checklist
+
 import {
-  MdGroup,
-  MdLightbulb,
   MdTrendingDown,
-  MdScience,
-  MdPeople,
-  MdShare,
+  MdOutlinePsychologyAlt,
+  MdShuffle,
+  MdVisibilityOff,
+  MdSentimentDissatisfied,
+  MdHelpOutline,
+} from "react-icons/md";
+
+import {
   MdTrendingUp,
+  MdFlag,
+  MdOutlineLightbulb,
+  MdPeopleAlt,
+  MdHandshake,
+  MdVerified,
 } from "react-icons/md";
 
 const Daddy = () => {
@@ -267,21 +274,58 @@ const Daddy = () => {
     };
   };
 
-  // Checklist data as arrays with icons
   const algorithmBlamerChecklist = [
-    { text: "You chase what’s trending instead of what fits you", icon: BiSolidDislike },
-    { text: "You try different formats without a clear reason", icon: MdGroup },
-    { text: "You get attention, but it doesn’t lead anywhere", icon: MdLightbulb },
-    { text: "You struggle to turn content into trust or opportunities", icon: MdTrendingDown },
-    { text: "You’re never fully sure what to post next", icon: MdScience },
+    {
+      text: "You’re creating content with the hope that this one might finally take off.",
+      icon: MdTrendingDown, // hoping, but results going down
+    },
+    {
+      text: "You chase what’s trending instead of what fits you",
+      icon: MdShuffle, // random chasing
+    },
+    {
+      text: "You try different formats without a clear reason",
+      icon: MdOutlinePsychologyAlt, // mental confusion
+    },
+    {
+      text: "You get attention, but it doesn’t lead anywhere",
+      icon: MdVisibilityOff, // visibility without clarity
+    },
+    {
+      text: "You struggle to turn content into trust or opportunities",
+      icon: MdSentimentDissatisfied      , // frustration
+    },
+    {
+      text: "You’re never fully sure what to post next",
+      icon: MdHelpOutline, // uncertainty
+    },
   ];
 
   const algoDaddyChecklist = [
-    { text: "You create with a clear long-term goal", icon: MdShare },
-    { text: "Your ideas are structured so people follow and remember", icon: MdLightbulb },
-    { text: "You attract the right audience, not just more views", icon: MdPeople },
-    { text: "You turn attention into trust — and trust into opportunities", icon: MdTrendingUp },
-    { text: "You’re remembered for something specific", icon: MdScience },
+    {
+      text: "You’re no longer chasing moments.",
+      icon: MdFlag, // direction & focus
+    },
+    {
+      text: "You create with a clear long-term goal",
+      icon: MdTrendingUp, // growth path
+    },
+    {
+      text: "Your ideas are structured so people follow and remember",
+      icon: MdOutlineLightbulb, // clarity of thought
+    },
+    {
+      text: "You attract the right audience, not just more views",
+      icon: MdPeopleAlt, // quality audience
+    },
+    {
+      text: "You turn attention into trust — and trust into opportunities",
+      icon: MdHandshake, // trust + conversion
+    },
+    {
+      text: "You’re remembered for something specific",
+      icon: MdVerified, // authority & identity
+    },
   ];
 
   const renderAnimatedText = (text, className) => {
@@ -414,42 +458,21 @@ const Daddy = () => {
                   </motion.div>
                 </div>
                 <div className="mt-10">
+                 
                   <h2>
                     {renderAnimatedText(
-                      "algorithm",
-                      "text-4xl md:text-5xl tracking-tighter font-bellefair font-light text-[#252524]"
+                      "Chasing",
+                      "text-6xl font-bold tracking-tighter text-[#FF6262] mb-4"
                     )}
                   </h2>
                   <h2>
                     {renderAnimatedText(
-                      "blamer",
-                      "text-7xl md:text-8xl font-bold tracking-tighter text-[#FF6262] mb-4"
+                      "Virality",
+                      "text-6xl font-bold tracking-tighter text-[#FF6262] mb-4"
                     )}
                   </h2>
-                  <motion.h2
-                      className="text-base md:text-lg "
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.8 }}
-                    >
-                      Chasing Virality
-                    </motion.h2>
-                  <motion.p
-                    className="text-base text-gray-600 mb-3 leading-relaxed font-space"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                  >
-                    You’re creating content with the hope that
-                    <br />
-                    this one might finally take off.
-                    <br />
-                    Some posts spike
-                    <br />
-                    Most disappear.
-                  </motion.p>
+                 
+                 
                 </div>
               </div>
 
@@ -497,7 +520,7 @@ const Daddy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.2 }}
-                className="hidden md:block md:-ml-24"
+                className="hidden md:block md:-ml-16"
               >
                 <Image
                   src={arrow2}
@@ -522,47 +545,39 @@ const Daddy = () => {
                     </motion.div>
                   </div>
                   <div className="flex flex-col md:items-end mt-8 md:mt-0 justify-end md:w-[90%]">
+                    
                     <h2>
                       {renderAnimatedText(
-                        "algo",
-                        "text-4xl md:text-5xl tracking-tighter font-light font-bellefair"
+                        "Building",
+                        "text-6xl font-bold tracking-tighter text-[#00CC94] mb-4"
                       )}
                     </h2>
                     <h2>
                       {renderAnimatedText(
-                        "daddy",
-                        "text-7xl md:text-8xl font-bold tracking-tighter text-[#00CC94] mb-4"
+                        "Something",
+                        "text-6xl font-bold tracking-tighter text-[#00CC94] mb-4"
+                      )}
+                    </h2>
+                    <h2>
+                      {renderAnimatedText(
+                        "Sustainable",
+                        "text-6xl font-bold tracking-tighter text-[#00CC94] mb-4"
                       )}
                     </h2>
                     <motion.h2
-                      className="text-base md:text-lg text-right"
+                      className="text-lg md:text-right"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.8 }}
                     >
-                      Building Something Sustainable <br />(AI-assisted)
+                    (AI-assisted)
                     </motion.h2>
-                    <motion.p
-                      className="text-base text-gray-600 mb-4 md:mb-6 text-left md:text-right leading-relaxed font-space"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 1 }}
-                    >
-                      You’re no longer chasing moments.
-                      <br />
-                      You’re building momentum.
-                      <br />
-                      Your content has direction.
-                      <br />
-                      And it keeps working for you after it’s posted.
-                 
-                    </motion.p>
+                   
                   </div>
                 </div>
 
-                <div className="rounded-lg">
+                <div className="rounded-lg mt-7">
                   <motion.div
                     className="space-y-1 md:space-y-2 bg-[#C4FFCB] border w-full md:w-[80%] mx-auto rounded-lg border-[#24C637] py-2 text-sm relative shadow-lg overflow-hidden"
                     variants={checklistVariants}
@@ -589,19 +604,7 @@ const Daddy = () => {
                         </div>
                       </motion.div>
                     ))}
-                    <motion.div
-                      className="absolute -bottom-6 md:-bottom-10 lg:-bottom-24 -left-[60%] md:-left-[75%] hidden md:block"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 1.8 }}
-                    >
-                      <Image
-                        src={arrow3}
-                        alt="Arrow"
-                        className="text-red-500 w-[150px] lg:w-[180px] xl:w-[200px] drop-shadow-sm"
-                      />
-                    </motion.div>
+                    
                   </motion.div>
                 </div>
               </div>
